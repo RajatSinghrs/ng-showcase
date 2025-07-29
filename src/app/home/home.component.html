@@ -1,1 +1,264 @@
-<p>home works!</p>
+<div class="min-h-screen bg-background">
+  <!-- Hero Section -->
+  <section 
+    class="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+    style="background-image: url('assets/hero-background.jpg')"
+  >
+    <div class="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background"></div>
+    
+    <div class="relative z-10 container max-w-6xl mx-auto px-4 text-center">
+      <div class="space-y-8">
+        <div class="space-y-4">
+          <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
+            <span class="gradient-text">Rajat Singh</span>
+          </h1>
+          <div class="text-2xl md:text-4xl font-medium text-foreground/90 h-16 flex items-center justify-center">
+            <app-typewriter-effect 
+              [texts]="[
+                'NPM Package Developer',
+                'TypeScript Enthusiast', 
+                'React Developer',
+                'Animation Specialist'
+              ]"
+              class="text-primary"
+            ></app-typewriter-effect>
+          </div>
+        </div>
+        
+        <p class="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          Creating powerful, lightweight npm packages that bring beautiful animations 
+          and enhanced user experiences to modern web applications.
+        </p>
+        
+        <div class="flex flex-wrap gap-4 justify-center pt-8">
+          <button 
+            mat-raised-button
+            class="bg-gradient-primary hover:opacity-90 text-lg px-8 py-3 glow-effect"
+            (click)="scrollToPackages()"
+          >
+            <lucide-icon class="mr-2 h-5 w-5" name="code"></lucide-icon>
+            View Packages
+          </button>
+          <button 
+            mat-stroked-button
+            class="text-lg px-8 py-3 border-primary/50 hover:bg-primary/10"
+(click)="openExternalLink1()"
+          >
+          <!-- <button 
+            mat-stroked-button
+            class="text-lg px-8 py-3 border-primary/50 hover:bg-primary/10"
+            (click)="window.open('https://testtypewriternpm.netlify.app/', '_blank')"
+          > -->
+            <lucide-icon class="mr-2 h-5 w-5" name="externalLink"></lucide-icon>
+            Live Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 border-b border-border/50">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <mat-card class="text-center bg-gradient-card border-border/50">
+          <mat-card-header>
+            <div class="flex justify-center w-full">
+              <lucide-icon class="h-12 w-12 text-primary mb-4" name="terminal"></lucide-icon>
+            </div>
+            <mat-card-title class="text-4xl font-bold gradient-text">1+</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="text-muted-foreground">Active NPM Packages</p>
+          </mat-card-content>
+        </mat-card>
+        
+        <mat-card class="text-center bg-gradient-card border-border/50">
+          <mat-card-header>
+            <div class="flex justify-center w-full">
+              <lucide-icon class="h-12 w-12 text-primary mb-4" name="code"></lucide-icon>
+            </div>
+            <mat-card-title class="text-4xl font-bold gradient-text">1000+</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="text-muted-foreground">Total Downloads</p>
+          </mat-card-content>
+        </mat-card>
+        
+        <mat-card class="text-center bg-gradient-card border-border/50">
+          <mat-card-header>
+            <div class="flex justify-center w-full">
+              <lucide-icon class="h-12 w-12 text-primary mb-4" name="zap"></lucide-icon>
+            </div>
+            <mat-card-title class="text-4xl font-bold gradient-text">2</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="text-muted-foreground">Live Testing Apps</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Section -->
+  <section id="packages" class="py-20">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="gradient-text">My NPM Packages</span>
+        </h2>
+        <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+          Discover powerful, lightweight packages designed to enhance your development experience
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <app-package-card *ngFor="let pkg of packages" [package]="pkg"></app-package-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Start Section -->
+  <section class="py-20 bg-muted/30 border-y border-border/50">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="gradient-text">Quick Start</span>
+        </h2>
+        <p class="text-xl text-muted-foreground">
+          Get started with typewriter-text-effect in seconds
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="space-y-6">
+          <h3 class="text-2xl font-bold text-foreground">Installation</h3>
+          <app-code-block 
+            title="Install via npm"
+            [code]="installCode"
+            language="bash"
+          ></app-code-block>
+        </div>
+        
+        <div class="space-y-6">
+          <h3 class="text-2xl font-bold text-foreground">Basic Usage</h3>
+          <app-code-block 
+            title="React Component"
+            [code]="usageCode"
+            language="typescript"
+          ></app-code-block>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testing Applications Section -->
+  <section class="py-20">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="gradient-text">Live Testing Applications</span>
+        </h2>
+        <p class="text-xl text-muted-foreground">
+          Interactive demos showcasing package functionality
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <mat-card class="group hover:glow-effect transition-all duration-300 bg-gradient-card border-border/50">
+          <mat-card-header>
+            <mat-card-title class="text-xl font-bold gradient-text">React Testing Suite</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="space-y-4">
+            <p class="text-muted-foreground">
+              Comprehensive testing environment for typewriter-text-effect with various configuration options
+            </p>
+            <button 
+              mat-raised-button
+              class="w-full bg-gradient-primary hover:opacity-90"
+              (click)="openExternalLink2()"
+            >
+            <!-- <button 
+              mat-raised-button
+              class="w-full bg-gradient-primary hover:opacity-90"
+              (click)="window.open('https://testtypewriternpm.netlify.app/', '_blank')"
+            > -->
+              <lucide-icon class="mr-2 h-4 w-4" name="externalLink"></lucide-icon>
+              View React Demo
+            </button>
+          </mat-card-content>
+        </mat-card>
+        
+        <mat-card class="group hover:glow-effect transition-all duration-300 bg-gradient-card border-border/50">
+          <mat-card-header>
+            <mat-card-title class="text-xl font-bold gradient-text">Angular Testing App</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="space-y-4">
+            <p class="text-muted-foreground">
+              Angular integration testing for cross-framework compatibility validation
+            </p>
+            <button 
+              mat-raised-button
+              class="w-full bg-gradient-primary hover:opacity-90"
+(click)="openExternalLink3()"
+            >
+            <!-- <button 
+              mat-raised-button
+              class="w-full bg-gradient-primary hover:opacity-90"
+              (click)="window.open('https://ngtest-typewriter.netlify.app/testing', '_blank')"
+            > -->
+              <lucide-icon class="mr-2 h-4 w-4" name="externalLink"></lucide-icon>
+              View Angular Demo
+            </button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20 bg-muted/30 border-t border-border/50">
+    <div class="container max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        <span class="gradient-text">Get In Touch</span>
+      </h2>
+      <p class="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        Have questions, suggestions, or want to collaborate? I'd love to hear from you!
+      </p>
+      
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button 
+          mat-stroked-button
+          class="border-primary/50 hover:bg-primary/10"
+(click)="openExternalLink4()"
+        >
+        <!-- <button 
+          mat-stroked-button
+          class="border-primary/50 hover:bg-primary/10"
+          (click)="window.open('https://github.com/rajatsingh_rs', '_blank')"
+        > -->
+          <lucide-icon class="mr-2 h-5 w-5" name="github"></lucide-icon>
+          GitHub Profile
+        </button>
+        <button>
+        <!-- <button 
+          mat-stroked-button
+          class="border-primary/50 hover:bg-primary/10"
+          (click)="window.location.href = 'mailto:your.email@example.com'"
+        > -->
+          <lucide-icon class="mr-2 h-5 w-5" name="mail"></lucide-icon>
+          Email Me
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-border/50">
+    <div class="container max-w-6xl mx-auto px-4 text-center">
+      <p class="text-muted-foreground">
+        © 2024 Rajat Singh. All rights reserved. Built with Angular, TypeScript, and Tailwind CSS.
+      </p>
+    </div>
+  </footer>
+</div>

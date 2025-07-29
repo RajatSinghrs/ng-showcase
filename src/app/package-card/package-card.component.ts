@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-package-card',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './package-card.component.scss'
 })
 export class PackageCardComponent {
+  @Input() package: any;
 
 }

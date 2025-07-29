@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-code-block',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './code-block.component.scss'
 })
 export class CodeBlockComponent {
-
+@Input() title: string = '';
+  @Input() code: string = '';
+  @Input() language: string = 'typescript';
 }
