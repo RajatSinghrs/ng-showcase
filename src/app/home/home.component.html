@@ -6,35 +6,34 @@
     <div class="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background bg-white/20"></div>
 
     <div class="relative z-10 container max-w-6xl mx-auto px-4 text-center">
-      <div class="space-y-8">
+      <div class="space-y-8" style="display: inline-block;">
         <div class="space-y-4">
           <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
-            <span class="gradient-text">Rajat Singh</span>
+            <span class="gradient-text header">Rajat Singh</span>
           </h1>
           <div class="text-2xl md:text-4xl font-medium text-foreground/90 h-16 flex items-center justify-center">
             <app-typewriter-effect [texts]="[
                 'NPM Package Developer',
                 'TypeScript Enthusiast', 
-                'React Developer',
+                'Angular Developer',
                 'Animation Specialist'
               ]" class="text-primary"></app-typewriter-effect>
           </div>
         </div>
 
-        <p class="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        <p class="ff_Segoe text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           Creating powerful, lightweight npm packages that bring beautiful animations
           and enhanced user experiences to modern web applications.
         </p>
 
-        <div class="flex flex-wrap gap-4 justify-center pt-8">
-          <button mat-raised-button class="bg-gradient-primary hover:opacity-90 text-lg px-8 py-3 glow-effect"
-            (click)="scrollToPackages()">
-            <lucide-icon class="mr-2 h-5 w-5" name="code"></lucide-icon>
+
+        <div class="button-spacer">
+          <button mat-raised-button class="codeBtn ff_Segoe" (click)="scrollToPackages()">
+            <mat-icon class="mr-2">code</mat-icon>
             View Packages
           </button>
-          <button mat-stroked-button class="text-lg px-8 py-3 border-primary/50 hover:bg-primary/10"
-            (click)="openExternalLink1()">
-            <lucide-icon class="mr-2 h-5 w-5" name="externalLink"></lucide-icon>
+          <button mat-stroked-button class="linkBtn ff_Segoe" (click)="openExternalLink1()">
+            <mat-icon class="mr-2">open_in_new</mat-icon>
             Live Demo
           </button>
         </div>
