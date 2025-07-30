@@ -48,7 +48,7 @@
 }
 
 .card {
-    display: flex   ;
+    display: flex;
     height: 200px;
     border-radius: 0.5rem;
     color: hsl(var(--card-foreground));
@@ -58,9 +58,73 @@
     justify-content: center;
     align-items: center;
 }
+.card_new{
+    background: var(--gradient-card);
+    border: 1px solid rgba(var(--border), 0.5);
+    transition: all 0.3s ease;
+}
 
-.midSection{
+.midSection {
     display: grid;
     justify-content: center;
     align-items: center;
 }
+
+// "flex flex-wrap gap-4 justify-center"
+
+.button-spacer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .gitBtn {
+        display: flex;
+        border-radius: calc(var(--radius) - 2px);
+        border-color: #841dc5;
+        padding: 20px 36px;
+        color: #ffffff;
+        transition: 0.5s;
+        background-color: #141414;
+    }
+
+    .gitBtn:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+        background-color: #46055624;
+    }
+    .mailBtn {
+        display: flex;
+        border-radius: calc(var(--radius) - 2px);
+        border-color: #841dc5;
+        padding: 20px 36px;
+        color: #ffffff;
+        transition: 0.5s;
+        background-color: #141414;
+    }
+
+    .mailBtn:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+        background-color: #46055624;
+    }
+}
+
+
+    .linkBtn_wide{
+        background-image: linear-gradient(to right, #4754e6 0%, #b956f6 51%, #4754e6 100%) !important;
+        padding: 22px 40px !important;
+        transition: 0.5s !important;
+        background-size: 200% auto !important;
+        color: #000000 !important;
+        box-shadow: 0 0 24px 4px #9d43f184 !important;
+        border-radius: calc(var(--radius) - 2px) !important;
+        width: 100%;
+    }
+
+    .linkBtn_wide:hover {
+        background-position: right center !important;
+        text-decoration: none !important;
+    }
