@@ -167,21 +167,33 @@
   <!-- Contact Section -->
   <section class="py-20 bg-muted/30 border-t border-border/50">
     <div class="container max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">
-        <span class="gradient-text">Get In Touch</span>
-      </h2>
-      <p class="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-        Have questions, suggestions, or want to collaborate? I'd love to hear from you!
-      </p>
+      <div style="display: inline-block;">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="gradient-text header">Get In Touch</span>
+        </h2>
+        <p class="ff_Segoe text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          Have questions, suggestions, or want to collaborate? I'd love to hear from you!
+        </p>
+      </div>
 
-      <div class="flex flex-wrap gap-4 justify-center">
-        <button mat-stroked-button class="border-primary/50 hover:bg-primary/10" (click)="openExternalLink4()">
+      <div class="button-spacer">
+        <!-- <button mat-stroked-button class="border-primary/50 hover:bg-primary/10" (click)="openExternalLink4()">
           <lucide-icon class="mr-2 h-5 w-5" name="github"></lucide-icon>
           GitHub Profile
+        </button> -->
+
+        <button mat-stroked-button class="gitBtn ff_Segoe" (click)="openExternalLink4()">
+          <span class="inline-flex items-center gap-2">
+            <lucide-icon class="w-5 h-5" name="github"></lucide-icon>
+            <span>Source</span>
+          </span>
         </button>
-        <button>
-          <lucide-icon class="mr-2 h-5 w-5" name="mail"></lucide-icon>
-          Email Me
+        
+        <button mat-stroked-button class="mailBtn ff_Segoe">
+          <!-- <lucide-icon class="mr-2 h-5 w-5" name="mail"></lucide-icon>
+          Email Me -->
+         <mat-icon class="mr-2">mail_outline</mat-icon>
+         Email Me
         </button>
       </div>
     </div>
@@ -190,7 +202,7 @@
   <!-- Footer -->
   <footer class="py-8 border-t border-border/50">
     <div class="container max-w-6xl mx-auto px-4 text-center">
-      <p class="text-muted-foreground">
+      <p class="ff_Segoe text-muted-foreground">
         © 2024 Rajat Singh. All rights reserved. Built with Angular, TypeScript, and Tailwind CSS.
       </p>
     </div>

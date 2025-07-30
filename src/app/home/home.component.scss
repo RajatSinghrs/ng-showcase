@@ -48,7 +48,7 @@
 }
 
 .card {
-    display: flex   ;
+    display: flex;
     height: 200px;
     border-radius: 0.5rem;
     color: hsl(var(--card-foreground));
@@ -59,8 +59,50 @@
     align-items: center;
 }
 
-.midSection{
+.midSection {
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+// "flex flex-wrap gap-4 justify-center"
+
+.button-spacer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .gitBtn {
+        display: flex;
+        border-radius: calc(var(--radius) - 2px);
+        border-color: #841dc5;
+        padding: 20px 36px;
+        color: #ffffff;
+        transition: 0.5s;
+        background-color: #141414;
+    }
+
+    .gitBtn:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+        background-color: #46055624;
+    }
+    .mailBtn {
+        display: flex;
+        border-radius: calc(var(--radius) - 2px);
+        border-color: #841dc5;
+        padding: 20px 36px;
+        color: #ffffff;
+        transition: 0.5s;
+        background-color: #141414;
+    }
+
+    .mailBtn:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+        background-color: #46055624;
+    }
 }

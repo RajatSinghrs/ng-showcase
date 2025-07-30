@@ -19,13 +19,6 @@ mat-card:hover {
     box-shadow: 0 0 10px rgba(var(--primary), 0.4);
 }
 
-// .flex {
-//     display: flex;
-// }
-
-// .items-center {
-//     align-items: center;
-// }
 
 .justify-between {
     justify-content: space-between;
@@ -39,20 +32,12 @@ mat-card:hover {
     flex-wrap: wrap;
 }
 
-// .gap-2 {
-//     gap: 0.5rem;
-// }
-
 .tag {
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
     border-radius: 9999px;
     background: var(--muted);
     color: var(--muted-foreground);
-}
-
-.space-y-2>*+* {
-    margin-top: 0.5rem;
 }
 
 .text-foreground {
