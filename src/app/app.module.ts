@@ -12,8 +12,11 @@ import { PackageCardComponent } from './package-card/package-card.component';
 import { CodeBlockComponent } from './code-block/code-block.component';
 
 import { LucideAngularModule, Github, Mail, ExternalLink, Terminal, Code, Zap } from 'lucide-angular';
-import { MatButtonModule } from '@angular/material/button';
+import { MatButtonModule, MatIconButton } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import {MatChipsModule} from '@angular/material/chips';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     MatButtonModule,
     MatCardModule,
+    MatIconButton,
+    MatIconModule,
+    MatChipsModule,
     LucideAngularModule.pick({ Github, Mail, ExternalLink, Terminal, Code, Zap })
   ],
   providers: [],

@@ -1,0 +1,66 @@
+// Gloval font 
+// note - make it global later
+.ff_Segoe {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    font-weight: bold;
+}
+
+// gradient button
+.button-spacer {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .codeBtn {
+        background-image: linear-gradient(to right, #4754e6 0%, #b956f6 51%, #4754e6 100%);
+        padding: 22px 40px;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: #000000;
+        box-shadow: 0 0 24px 4px #9d43f184;
+        border-radius: calc(var(--radius) - 2px);
+    }
+
+    .codeBtn:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .linkBtn {
+        border-radius: calc(var(--radius) - 2px);
+        border-color: #841dc5;
+        padding: 22px 40px;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+
+    .linkBtn:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+        background-color: #46055624;
+    }
+}
+
+.card {
+    display: flex   ;
+    height: 200px;
+    border-radius: 0.5rem;
+    color: hsl(var(--card-foreground));
+    text-align: center;
+    background: var(--gradient-card);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    justify-content: center;
+    align-items: center;
+}
+
+.midSection{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
