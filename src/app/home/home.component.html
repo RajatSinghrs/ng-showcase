@@ -45,41 +45,31 @@
   <section class="py-20 border-b border-border/50">
     <div class="container max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <mat-card class="text-center bg-gradient-card border-border/50">
-          <mat-card-header>
-            <div class="flex justify-center w-full">
-              <lucide-icon class="h-12 w-12 text-primary mb-4" name="terminal"></lucide-icon>
-            </div>
-            <mat-card-title class="text-4xl font-bold gradient-text">1+</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p class="text-muted-foreground">Active NPM Packages</p>
-          </mat-card-content>
+
+        <mat-card class="card">
+          <div class="flex flex-col items-center">
+            <lucide-icon class="h-12 w-12 text-primary mb-2" name="terminal"></lucide-icon>
+            <div class="text-4xl font-bold gradient-text">1+</div>
+            <p class="ff_Segoe text-muted-foreground mt-1">Active NPM Packages</p>
+          </div>
         </mat-card>
 
-        <mat-card class="text-center bg-gradient-card border-border/50">
-          <mat-card-header>
-            <div class="flex justify-center w-full">
-              <lucide-icon class="h-12 w-12 text-primary mb-4" name="code"></lucide-icon>
-            </div>
-            <mat-card-title class="text-4xl font-bold gradient-text">1000+</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p class="text-muted-foreground">Total Downloads</p>
-          </mat-card-content>
+        <mat-card class="card">
+          <div class="flex flex-col items-center">
+            <lucide-icon class="h-12 w-12 text-primary mb-2" name="code"></lucide-icon>
+            <div class="text-4xl font-bold gradient-text">1000+</div>
+            <p class="ff_Segoe text-muted-foreground mt-1">Total Downloads</p>
+          </div>
         </mat-card>
 
-        <mat-card class="text-center bg-gradient-card border-border/50">
-          <mat-card-header>
-            <div class="flex justify-center w-full">
-              <lucide-icon class="h-12 w-12 text-primary mb-4" name="zap"></lucide-icon>
-            </div>
-            <mat-card-title class="text-4xl font-bold gradient-text">2</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p class="text-muted-foreground">Live Testing Apps</p>
-          </mat-card-content>
+        <mat-card class="card">
+          <div class="flex flex-col items-center">
+            <lucide-icon class="h-12 w-12 text-primary mb-2" name="zap"></lucide-icon>
+            <div class="text-4xl font-bold gradient-text">2</div>
+            <p class="ff_Segoe text-muted-foreground mt-1">Live Testing Apps</p>
+          </div>
         </mat-card>
+
       </div>
     </div>
   </section>
@@ -87,11 +77,11 @@
   <!-- Packages Section -->
   <section id="packages" class="py-20">
     <div class="container max-w-6xl mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">
-          <span class="gradient-text">My NPM Packages</span>
+      <div class="midSection text-center mb-16">
+        <h2 class="text-4xl md:text-5xl ">
+          <span class="ff_Segoe font-medium gradient-text">My NPM Packages</span>
         </h2>
-        <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+        <p class="text-xl text-muted-foreground max-w-3xl mx-auto ff_Segoe">
           Discover powerful, lightweight packages designed to enhance your development experience
         </p>
       </div>
@@ -107,21 +97,21 @@
     <div class="container max-w-6xl mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold mb-6">
-          <span class="gradient-text">Quick Start</span>
+          <span class="ff_Segoe gradient-text">Quick Start</span>
         </h2>
-        <p class="text-xl text-muted-foreground">
+        <p class="ff_Segoe text-xl text-muted-foreground">
           Get started with typewriter-text-effect in seconds
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
         <div class="space-y-6">
-          <h3 class="text-2xl font-bold text-foreground">Installation</h3>
+          <h3 class="ff_Segoe text-2xl font-bold text-foreground">Installation</h3>
           <app-code-block title="Install via npm" [code]="installCode" language="bash"></app-code-block>
         </div>
 
         <div class="space-y-6">
-          <h3 class="text-2xl font-bold text-foreground">Basic Usage</h3>
+          <h3 class="ff_Segoe text-2xl font-bold text-foreground">Basic Usage</h3>
           <app-code-block title="React Component" [code]="usageCode" language="typescript"></app-code-block>
         </div>
       </div>
@@ -133,9 +123,9 @@
     <div class="container max-w-6xl mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold mb-6">
-          <span class="gradient-text">Live Testing Applications</span>
+          <span class="ff_Segoe gradient-text">Live Testing Applications</span>
         </h2>
-        <p class="text-xl text-muted-foreground">
+        <p class="ff_Segoe text-xl text-muted-foreground">
           Interactive demos showcasing package functionality
         </p>
       </div>
@@ -143,10 +133,10 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <mat-card class="group hover:glow-effect transition-all duration-300 bg-gradient-card border-border/50">
           <mat-card-header>
-            <mat-card-title class="text-xl font-bold gradient-text">React Testing Suite</mat-card-title>
+            <mat-card-title class="ff_Segoe text-xl font-bold gradient-text">React Testing Suite</mat-card-title>
           </mat-card-header>
           <mat-card-content class="space-y-4">
-            <p class="text-muted-foreground">
+            <p class="text-muted-foreground ff_Segoe">
               Comprehensive testing environment for typewriter-text-effect with various configuration options
             </p>
             <button mat-raised-button class="w-full bg-gradient-primary hover:opacity-90" (click)="openExternalLink2()">

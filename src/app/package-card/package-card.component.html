@@ -1,56 +1,37 @@
-<mat-card class="bg-gradient-card border-border/50 hover:glow-effect transition-all duration-300">
+<mat-card>
   <mat-card-header>
-    <mat-card-title class="text-2xl font-bold gradient-text">{{package.name}}</mat-card-title>
-    <mat-card-subtitle class="text-muted-foreground">
-      {{package.description}}
-    </mat-card-subtitle>
+    <mat-card-title class="gradient-text ff_Segoe">{{ package.name }}</mat-card-title>
+    <mat-card-subtitle>{{ package.description }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <div class="space-y-4">
       <div class="flex items-center justify-between">
-        <span class="text-sm text-muted-foreground">Version: {{package.version}}</span>
-        <span class="text-sm text-muted-foreground">Downloads: {{package.downloads}}</span>
+        <span class="text-sm text-muted-foreground">Version: {{ package.version }}</span>
+        <span class="text-sm text-muted-foreground">Downloads: {{ package.downloads }}</span>
       </div>
-      
+
       <div class="flex flex-wrap gap-2">
-        <span *ngFor="let tag of package.tags" class="px-2 py-1 text-xs rounded-full bg-muted text-muted-foreground">
-          {{tag}}
-        </span>
+        <span *ngFor="let tag of package.tags" class="tag">{{ tag }}</span>
       </div>
-      
+
       <div class="space-y-2">
         <h4 class="font-medium text-foreground">Features:</h4>
         <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
-          <li *ngFor="let feature of package.features">{{feature}}</li>
+          <li *ngFor="let feature of package.features">{{ feature }}</li>
         </ul>
       </div>
-      
+
       <div class="flex flex-wrap gap-2 pt-4">
-        <a 
-          mat-stroked-button
-          href="{{package.npmUrl}}" 
-          target="_blank"
-          class="border-primary/50 hover:bg-primary/10"
-        >
-          <lucide-icon class="mr-2 h-4 w-4" name="externalLink"></lucide-icon>
+        <a mat-stroked-button href="{{ package.npmUrl }}" target="_blank" class="link-button">
+          <lucide-icon class="link-icon" name="externalLink"></lucide-icon>
           NPM
         </a>
-        <a 
-          mat-stroked-button
-          href="{{package.demoUrl}}" 
-          target="_blank"
-          class="border-primary/50 hover:bg-primary/10"
-        >
-          <lucide-icon class="mr-2 h-4 w-4" name="externalLink"></lucide-icon>
+        <a mat-stroked-button href="{{ package.demoUrl }}" target="_blank" class="link-button">
+          <lucide-icon class="link-icon" name="externalLink"></lucide-icon>
           Demo
         </a>
-        <a 
-          mat-stroked-button
-          href="{{package.githubUrl}}" 
-          target="_blank"
-          class="border-primary/50 hover:bg-primary/10"
-        >
-          <lucide-icon class="mr-2 h-4 w-4" name="github"></lucide-icon>
+        <a mat-stroked-button href="{{ package.githubUrl }}" target="_blank" class="link-button">
+          <lucide-icon class="link-icon" name="github"></lucide-icon>
           GitHub
         </a>
       </div>
