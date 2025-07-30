@@ -1,6 +1,13 @@
 .ff_Segoe {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.small{
+    font-size: x-small;
+    color: white;
+}
+.font-bold{ 
+    font-weight: bold;
+}
 
 mat-card {
     background: var(--gradient-card);
@@ -12,17 +19,13 @@ mat-card:hover {
     box-shadow: 0 0 10px rgba(var(--primary), 0.4);
 }
 
-.space-y-4>*+* {
-    margin-top: 1rem;
-}
+// .flex {
+//     display: flex;
+// }
 
-.flex {
-    display: flex;
-}
-
-.items-center {
-    align-items: center;
-}
+// .items-center {
+//     align-items: center;
+// }
 
 .justify-between {
     justify-content: space-between;
@@ -36,9 +39,9 @@ mat-card:hover {
     flex-wrap: wrap;
 }
 
-.gap-2 {
-    gap: 0.5rem;
-}
+// .gap-2 {
+//     gap: 0.5rem;
+// }
 
 .tag {
     padding: 0.25rem 0.5rem;
@@ -81,32 +84,80 @@ mat-card:hover {
     background: rgba(var(--primary), 0.1);
 }
 
-.link-icon {
-    margin-right: 0.5rem;
-    width: 1rem;
-    height: 1rem;
-}
-
-::ng-deep .mat-mdc-card-subtitle {
-  all: unset !important; 
-  font-size: inherit !important;
-  color: inherit ;
-  margin: 0 !important;
-  line-height: normal !important;
-}
-
-// .card {
-//   position: relative; 
-// }
-
 .chip-wrapper {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 .chip {
-  display: inline-block;
-  width: auto;
-  max-width: fit-content;
+    display: inline-block;
+    width: auto;
+    max-width: fit-content;
+    background-color: hsl(262, 83%, 16%) !important;
+    height: 20px;
+    border: none !important;
+    box-shadow: none !important;
+    line-height: 16px;
+}
+::ng-deep .mat-mdc-standard-chip .mdc-evolution-chip__action--primary::before {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.button-spacer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .codeBtn {
+        background-image: linear-gradient(to right, #4754e6 0%, #b956f6 51%, #4754e6 100%);
+        padding: 14px 28px;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: #000000;
+        box-shadow: 0 0 8px 2px #9d43f184;
+        border-radius: calc(var(--radius) - 2px);
+    }
+
+    .codeBtn:hover {
+        background-position: right center;
+        text-decoration: none;
+    }
+
+    .starBtn {
+        border-radius: calc(var(--radius) - 2px);
+        border-color: #841dc5;
+        padding: 14px 28px;
+        color: #ffffff;
+        transition: 0.5s;
+        background-color: #000000;
+    }
+
+    .starBtn:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+        background-color: #46055624;
+    }
+
+    .gitBtn{
+        border: none;
+        padding: 14px 28px;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+
+    .gitBtn:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+        background-color: #a73bc224;
+        
+    }
 }

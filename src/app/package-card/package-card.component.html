@@ -1,17 +1,19 @@
 <mat-card style="position: relative;">
-    <div class="chip-wrapper">
-  <mat-chip class="chip">
-    {{ package.version }}
-  </mat-chip>
+  <div class="chip-wrapper">
+    <mat-chip class="chip">
+      <p class="ff_Segoe small">v{{ package.version }}</p>
+    </mat-chip>
   </div>
   <mat-card-header style="display: grid;">
-    <mat-card-title class="gradient-text ff_Segoe">{{ package.name }}</mat-card-title>
+    <mat-card-title class="gradient-text font-bold ff_Segoe">{{ package.name }}</mat-card-title>
     <p class="ff_Segoe text-muted-foreground mt-1">{{ package.description }}</p>
   </mat-card-header>
   <mat-card-content>
     <div class="space-y-4">
       <div class="flex items-center justify-between">
-        <span class="text-sm text-muted-foreground">Downloads: {{ package.downloads }}</span>
+        <span class="text-sm text-muted-foreground">
+          <mat-icon class="saveIco">save_alt</mat-icon>
+          Downloads: {{ package.downloads }}</span>
       </div>
 
       <div class="flex flex-wrap gap-2">
@@ -25,7 +27,7 @@
         </ul>
       </div>
 
-      <div class="flex flex-wrap gap-2 pt-4">
+      <!-- <div class="flex flex-wrap gap-2 pt-4">
         <a mat-stroked-button href="{{ package.npmUrl }}" target="_blank" class="link-button">
           <lucide-icon class="link-icon" name="externalLink"></lucide-icon>
           NPM
@@ -35,9 +37,28 @@
           Demo
         </a>
         <a mat-stroked-button href="{{ package.githubUrl }}" target="_blank" class="link-button">
-          <lucide-icon class="link-icon" name="github"></lucide-icon>
           GitHub
         </a>
+      </div> -->
+      <div class="button-spacer">
+        <button mat-raised-button class="codeBtn ff_Segoe">
+          <mat-icon class="mr-2">open_in_new</mat-icon>
+          NPM Packages
+        </button>
+        <button mat-stroked-button class="starBtn ff_Segoe">
+          <mat-icon class="mr-2">star_border</mat-icon>
+          Live Demo
+        </button>
+        <!-- <button mat-stroked-button class="sourceBtn ff_Segoe flex items-center gap-2">
+          <lucide-icon class="link-icon" name="github"></lucide-icon>
+          Source
+        </button> -->
+        <button mat-stroked-button class="gitBtn ff_Segoe">
+          <span class="inline-flex items-center gap-2">
+            <lucide-icon class="w-4 h-4" name="github"></lucide-icon>
+            <span>Source</span>
+          </span>
+        </button>
       </div>
     </div>
   </mat-card-content>
