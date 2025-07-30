@@ -1,11 +1,12 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, ViewEncapsulation } from '@angular/core';
 import { Github, Mail, ExternalLink, Terminal, Code, Zap } from 'lucide-angular';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
+    encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent{
    isBrowser: boolean;
