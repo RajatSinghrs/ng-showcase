@@ -15,6 +15,8 @@ import { LucideAngularModule, Github, Mail, ExternalLink, Terminal, Code, Zap } 
 import { MatButtonModule, MatIconButton } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import {MatChipsModule} from '@angular/material/chips';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule,
     MatIconButton,
     MatIconModule,
+    MatChipsModule,
     LucideAngularModule.pick({ Github, Mail, ExternalLink, Terminal, Code, Zap })
   ],
   providers: [],

@@ -32,10 +32,6 @@ mat-card:hover {
     font-size: 0.875rem;
 }
 
-.text-muted-foreground {
-    color: var(--muted-foreground);
-}
-
 .flex-wrap {
     flex-wrap: wrap;
 }
@@ -89,4 +85,28 @@ mat-card:hover {
     margin-right: 0.5rem;
     width: 1rem;
     height: 1rem;
+}
+
+::ng-deep .mat-mdc-card-subtitle {
+  all: unset !important; 
+  font-size: inherit !important;
+  color: inherit ;
+  margin: 0 !important;
+  line-height: normal !important;
+}
+
+// .card {
+//   position: relative; 
+// }
+
+.chip-wrapper {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.chip {
+  display: inline-block;
+  width: auto;
+  max-width: fit-content;
 }

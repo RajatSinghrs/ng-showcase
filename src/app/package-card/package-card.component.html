@@ -1,12 +1,16 @@
-<mat-card>
-  <mat-card-header>
+<mat-card style="position: relative;">
+    <div class="chip-wrapper">
+  <mat-chip class="chip">
+    {{ package.version }}
+  </mat-chip>
+  </div>
+  <mat-card-header style="display: grid;">
     <mat-card-title class="gradient-text ff_Segoe">{{ package.name }}</mat-card-title>
-    <mat-card-subtitle>{{ package.description }}</mat-card-subtitle>
+    <p class="ff_Segoe text-muted-foreground mt-1">{{ package.description }}</p>
   </mat-card-header>
   <mat-card-content>
     <div class="space-y-4">
       <div class="flex items-center justify-between">
-        <span class="text-sm text-muted-foreground">Version: {{ package.version }}</span>
         <span class="text-sm text-muted-foreground">Downloads: {{ package.downloads }}</span>
       </div>
 
